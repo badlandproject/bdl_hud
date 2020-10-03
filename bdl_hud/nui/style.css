@@ -1,0 +1,297 @@
+/* -- [ E&G VENDAS - https://discord.gg/bABGBEX ] --
+--    [ SCRIPT GRATUITO! NÃO RE-VENDER ] --
+--    [ FEITO POR: Edu#0188 PARA DIVULGAÇÃO DA BASE DO BDL v3 ] --
+--    [ GITHUB DO PROJETO: https://github.com/badlandproject ] --
+--    [ LINK DE DOWNLOAD AUTORIZADO DESSE SCRIPT: https://github.com/badlandproject/bdl_hud ] -- */
+
+html {
+	overflow-x: hidden !important;
+	overflow-y: hidden !important;
+	background-color: transparent !important;
+}
+
+body {
+	font-size: 12px;
+	font-family: Arial,Helvetica,sans-serif;
+	background-color: transparent !important;
+}
+
+#hudDisplay {
+	right: 20px;
+	bottom: 25px;
+	position: absolute !important;
+}
+
+#imgserver {top: 20px;right: 0;left: 0;width: 180px;margin: 0 auto 0 auto;}
+#imgserver img {max-width: 110%;opacity: 0.7;}
+
+.hudDisplayText {
+	font-weight: 500;
+	font-size: 15px;
+	left: 0px;
+	top: -4px;
+	padding: 6px 9px;
+	color: rgba(255,255,255,0.9);
+	font-family: Poppins, sans-serif;
+	position: absolute !important;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+.hudDisplayTextIcon {
+	font-weight: 700;
+	font-size: 15px;
+	padding: 6px 9px;
+	color: rgba(255,255,255,0.9);
+	position: absolute !important;
+	text-shadow: 1px 1px rgba(0, 0, 0, 0.8);
+	text-align: center;
+}
+
+.topInfoContainer {
+	position: absolute;
+	height: 25px;
+	bottom: 150px;
+	right: 20px;
+	width: 330px;
+	background-color: rgba(0,0,0,0.5);
+	border-radius: 10px;
+}
+
+.hudBottomContainer {
+	position: absolute;
+	height: 100px;
+	width: 330px;
+	background-color: rgba(0,0,0,0.5);
+	right: 20px;
+	bottom: 40px;
+	border-radius: 10px;
+	position: absolute !important;
+}
+
+.infosBack {
+	position: absolute;
+	left: 5%;
+	top: 2.5px;
+	font-family: Poppins, sans-serif;
+	text-align: right;
+	color: rgba(255,255,255,0.8);
+	position: absolute !important;
+	
+}
+
+.infosBack b {
+	color: rgba(255,255,255,0.8);
+}
+
+.voiceBack {
+	float: left;
+	width: 6px;
+	height: 26px;
+	margin-left: 10px;
+}
+
+.voiceDisplay1 {
+	float: left;
+	width: 6px;
+	height: 6px;
+}
+
+.voiceDisplay2 {
+	float: left;
+	width: 6px;
+	height: 6px;
+}
+
+.voiceDisplay3 {
+	float: left;
+	width: 6px;
+	height: 6px;
+}
+
+.healthBack {
+	position: absolute;
+	width: 240px;
+	height: 26px;
+	background: rgba(0,0,0,0.4);
+	top: -60px;
+	left: -295px;
+	border-radius: 8px;
+	
+}
+
+.healthDisplay {
+	float: left;
+	height: 26px;
+	background-image: linear-gradient(to right, rgba(170,0,0,0.8) ,rgba(250,0,0,0.8));
+	border-radius: 8px;
+	transition: all 0.10s;
+}
+
+.armourBack {
+	position: absolute;
+	width: 115px;
+	height: 26px;
+	background: rgba(0,0,0,0.4);
+	
+	left: -295px;
+	top: -15px;
+	border-radius: 8px;
+	
+}
+
+.armourDisplay {
+	float: left;
+	height: 26px;
+	background: rgba(150,150,150,0.8);
+	transition: all 0.10s;
+	border-radius: 8px;
+}
+
+.staminaBack {
+	position: absolute;
+	width: 115px;
+	height: 26px;
+	background: rgba(0,0,0,0.4);
+	left: -170px;
+	top: -15px;
+	border-radius: 8px;
+	
+}
+
+.staminaDisplay {
+	float: left;
+	height: 26px;
+	background: rgba(0,130,130,0.8);
+	transition: all 0.10s;
+	border-radius: 8px;
+}
+
+.clockBack {
+	position: absolute;
+	width: 51px;
+	top: -60px;
+	right: -5px; 
+	height: 26px;
+	background: rgba(0,0,0,0.5);
+	border-radius: 8px;
+	margin-left: 5px;
+}
+
+#movieTop {
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 13%;
+	background: #000;
+	position: absolute;
+	display: none;
+}
+
+#movieBottom {
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	height: 13%;
+	background: #000;
+	position: absolute;
+	display: none;
+}
+
+.carContainer {
+	position: absolute;
+	background-color: rgba(0,0,0,0.4);
+	width: 120px;
+	height: 135px;
+	border-radius: 10px;
+	right: 360px;
+	bottom: 40px;
+}
+
+#carDisplayFuel {
+	left: 15px;
+	bottom: 10px;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: Poppins, sans-serif;
+	text-align: right;
+	color: rgba(255,255,255,0.9);
+	position: absolute !important;
+	text-shadow: 1px 1px rgba(0,0,0,1);
+}
+
+#carDisplayFuel b {
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	padding-right: 5px;
+	color: rgba(255,255,255,0.9);
+}
+
+#carDisplayFuel s {
+	font-size: 11px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	padding-right: 5px;
+	color: rgba(0,128,255,0.6);
+	text-decoration: none;
+}
+
+#carDisplaySpeed {
+	left: 50%;
+	bottom: 50%;
+	font-size: 18px;
+	font-weight: 500;
+	font-family: Poppins, sans-serif;
+	text-align: right;
+	color: rgba(255,255,255,0.9);
+	position: absolute !important;
+	text-shadow: 1px 1px rgba(0,0,0,1);
+	transform: translate(-50%,-50%);
+}
+
+#carDisplaySpeed b {
+	left: 55%;
+	bottom: 50%;
+	font-size: 14px;
+	font-weight: 300;
+	letter-spacing: 3px;
+	padding-right: 5px;
+	position: absolute !important;
+	color: rgba(255,255,255,0.9);
+	transform: translate(-50%,-50%);
+}
+
+.cinto{
+	background: rgba(0, 0, 0, 0.0);
+	width: 35px;
+	height: 35px;
+	align-items: center;
+	border-radius: 50px;
+  }
+  
+  .cinto-iconred{
+	position: relative;
+	width: 100%;
+	transform: translate(-50%);  
+	background: url(https://cdn.discordapp.com/attachments/740912067095035955/761446672789536768/cinto0.png) no-repeat;
+	background-size: cover;
+	margin-top: 55px;
+	margin-left: 13px;
+	width: 35px;
+	height: 35px;
+	-webkit-animation: fadeLoop 1s step-start infinite !important;
+	animation: fadeLoop 1s step-start infinite !important; 
+  }
+  
+  .cinto-icongreen{
+	position: relative;
+	width: 100%;
+	transform: translate(-50%);  
+	background: url(https://cdn.discordapp.com/attachments/740912067095035955/761446675054460948/cinto2.png) no-repeat;
+	background-size: cover;
+	margin-top: 55px;
+	margin-left: 13px;
+	width: 35px;
+	height: 35px;
+  }
